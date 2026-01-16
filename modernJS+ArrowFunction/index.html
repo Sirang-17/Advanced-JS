@@ -1,0 +1,96 @@
+<!-- ✔ Arrow functions
+✔ map, filter, reduce
+✔ Template literals
+✔ Destructuring
+✔ Default parameters
+✔ Spread operator
+✔ addEventListener
+✔ classList -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Modern JS One Frame</title>
+</head>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.user {
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+}
+
+.highlight {
+  background: #e0f7fa;
+  transform: scale(1.03);
+}
+
+</style>
+<body>
+
+  <h2>User List</h2>
+  <button id="toggle">Toggle Highlight</button>
+
+  <div id="users"></div>
+
+  <script>
+    // Data (spread + objects)
+const users = [
+  { name: "Ali", age: 22 },
+  { name: "Sara", age: 18 },
+  { name: "Ahmed", age: 25 }
+];
+
+// Arrow function + default parameter
+const createUserHTML = ({ name, age }, isAdult = age >= 20) =>
+  `<div class="user">
+     <strong>${name}</strong> - Age: ${age} (${isAdult ? "Adult" : "Teen"})
+   </div>`;
+
+// filter + map
+const renderUsers = () => {
+  document.getElementById("users").innerHTML =
+    users
+      .filter(user => user.age >= 18)
+      .map(user => createUserHTML(user))
+      .join("");
+};
+
+renderUsers();
+
+// reduce (total age)
+const totalAge = users.reduce((sum, user) => sum + user.age, 0);
+console.log(`Total Age: ${totalAge}`);
+
+// Event listener + arrow function + classList
+document.getElementById("toggle").addEventListener("click", () => {
+  document
+    .querySelectorAll(".user")
+    .forEach(card => card.classList.toggle("highlight"));
+});
+
+// Arrow functions → clean & modern syntax
+
+// Destructuring → { name, age }
+
+// Template literals → ${name}
+
+// map() → convert data to HTML
+
+// filter() → control displayed users
+
+// reduce() → calculate total age
+
+// addEventListener → user interaction
+
+// classList.toggle() → animation effect
+  </script>
+</body>
+</html>

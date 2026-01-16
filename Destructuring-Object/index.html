@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write("<h2> Object Destructuring. <br> Visit console! </h2>");
+        const student = {
+                name: "Ayesha",
+                age: 21,
+                course: "BSCS"
+            };
+
+            const { name, age } = student;
+
+            console.log(name); // Ayesha
+            console.log(age);  // 21
+
+    </script>
+    <script>
+        const user = {
+                username: "sirang",
+                email: "sirang@gmail.com"
+            };
+
+            const { username: userName, email: userEmail } = user;
+
+            console.log(userName);
+            console.log(userEmail);
+
+    </script>
+</body>
+</html>

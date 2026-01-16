@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//    Spread Operator with Objects
+// Example 1: Copy an object
+const student = {
+  name: "Ali",
+  age: 22
+};
+
+const copyStudent = { ...student };
+
+console.log(copyStudent);
+// { name: "Ali", age: 22 }
+
+
+// Example 2: Merge objects
+const personalInfo = {
+  name: "Ayesha",
+  city: "Karachi"
+};
+
+const educationInfo = {
+  degree: "BS",
+  university: "ABC University"
+};
+
+const fullInfo = {
+  ...personalInfo,
+  ...educationInfo
+};
+
+console.log(fullInfo);
+/*
+{
+  name: "Ayesha",
+  city: "Karachi",
+  degree: "BS",
+  university: "ABC University"
+}
+*/
+
+
+// Example 3: Override object properties
+const user = {
+  name: "Usman",
+  role: "User"
+};
+
+const updatedUser = {
+  ...user,
+  role: "Admin"
+};
+
+console.log(updatedUser);
+// { name: "Usman", role: "Admin" }
+
+    </script>
+</body>
+</html>

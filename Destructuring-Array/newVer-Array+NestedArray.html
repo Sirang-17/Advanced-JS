@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write("<h2> new array and nested array. <br> Visit console! </h2>");
+        let user = ["Smith Johnson", , "Pakistan", ["$25000"]];// not assign value for gender
+
+        let [fullName, age = 20, country, [gender, salary]] = user; //we have given value 20 for age if not present in array;
+
+        console.log(fullName);
+        console.log(age);
+        console.log(country);
+        console.log(gender);
+        console.log(salary);     
+    </script>
+    <script>
+        // for more simple 
+        let user1 = ["Smith Johnson", 24, "Pakistan", [ "male","$25000"]];
+
+        let [name, ...restItems ] = user1; // here we use rest operator to collect remaining items in array. 
+        
+        console.log(name);
+        console.log(restItems);
+        
+    </script>
+</body>
+</html>

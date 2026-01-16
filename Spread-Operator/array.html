@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//         1️⃣ Spread Operator with Arrays
+// Example 1: Copy an array
+const numbers = [1, 2, 3];
+
+const copyNumbers = [...numbers];
+
+console.log(copyNumbers); // [1, 2, 3]
+// ✔ Creates a new array
+// ✔ Changes in one array won’t affect the other
+// numbers contains [1, 2, 3]
+// ...numbers spreads the values → 1, 2, 3
+// These values are placed into a new array
+// copyNumbers becomes [1, 2, 3]
+// 📌 Why useful?
+// Because it creates a new array, not a reference.
+
+
+// Example 2: Merge arrays
+const arr1 = [10, 20];
+const arr2 = [30, 40];
+
+const mergedArray = [...arr1, ...arr2];
+
+console.log(mergedArray);
+// [10, 20, 30, 40]
+
+
+// Example 3: Add new elements
+const fruits = ["Apple", "Banana"];
+
+const newFruits = [...fruits, "Mango", "Orange"];
+
+console.log(newFruits);
+// ["Apple", "Banana", "Mango", "Orange"]
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//         Variable Property Names in Object Literals
+// Example 1: Using a variable as a property name
+        let propertyName = "name";
+        let obj = {
+            [propertyName]: "John",
+            course : "ICS"
+        };
+        console.log(obj); // Output: John
+        console.log(obj.name);
+
+// Example 2: Dynamic property names
+        let anotherProp = "student";
+        let obj2 = {
+            [anotherProp + "Name"]: "Alice",
+            age: 20
+        };
+        console.log(obj2);
+        console.log(obj2.studentName);
+
+// Example 3:
+        let prop3 = "students";
+        let obj3 = {
+            [prop3 + "Name"] : "Aliyan Mustafa",
+            city : "Karachi",
+            detail: function() {
+                return `${this.studentsName} is living in ${this.city}`;
+            }
+        };
+        console.log(obj3);
+        console.log(obj3.detail());
+        
+
+        
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write("<h2> new function syntax in object literals. <br> Visit console! </h2>");
+
+
+        let student = "studentName";
+        var obj = {
+            [student + "name"] : "Aliyan Karim",
+            course : "Arts",
+            "detail show"() {
+                return `${this.studentNamename} is enrolled in ${this.course} course.`;
+            }
+        };
+        console.log(obj);
+        console.log(obj["detail show"]());
+    </script>
+    <script>
+        let fname = "Mr. Smith";
+        let lname = "Jhonson";
+        let course = "Business";
+         function studentt(fname, lname, course){
+            let fullname = `${fname} ${lname}`;
+            return {fullname, course};
+         }
+         let studentInfo = studentt(fname, lname, course);
+         console.log(studentInfo.fullname);
+         console.log(studentInfo.course);
+         console.log(`${fname} is studying  ${course}.`);
+         
+         
+         
+    </script>
+</body>
+</html>

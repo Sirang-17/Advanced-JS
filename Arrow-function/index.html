@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 1️⃣ No Parameters
+const sayHi = () => {
+  console.log("Hi");
+};
+
+// 2️⃣ One Parameter (Parentheses Optional)
+const square = n => n * n;
+
+// 3️⃣ Multiple Parameters
+const multiply = (a, b) => a * b;
+
+// 4️⃣ Single Line Return (Implicit Return)
+// ✔ return keyword is automatic
+const sum = (a, b) => a + b;
+
+// 5️⃣ Multiple Lines (Explicit Return)
+const sumDetailed = (a, b) => {
+  let result = a + b;
+  return result;
+};
+
+// -------- FUNCTION CALLS (EXECUTION) --------
+sayHi();
+
+console.log("Square:", square(5));          // 25
+console.log("Multiply:", multiply(4, 3));   // 12
+console.log("Sum:", sum(10, 20));            // 30
+console.log("Detailed Sum:", sumDetailed(7, 8)); // 15
+
+  </script>
+</body>
+</html>

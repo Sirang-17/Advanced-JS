@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write("<h2> Nested Object Destructuring. <br> Visit console! </h2>");
+        const company = {
+                name: "TechSoft",
+                address: {
+                    city: "Islamabad",
+                    country: "Pakistan"
+                }
+            };
+
+            const {
+                address: { city, country }
+            } = company;
+
+            console.log(city); // Islamabad
+            console.log(country); // Pakistan
+    </script>
+</body>
+</html>

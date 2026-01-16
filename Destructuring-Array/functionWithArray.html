@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write("<h2> function with array destructuring. <br> Visit console! </h2>");
+        function user([name, age = 20, country]){
+            console.log(name,'\n',age,"\n",country);  
+        }
+        user(["Smith Johnson", ,"Pakistan"]); // not passing age so default value 20 will be used
+    </script>
+
+    <script>
+        function user1(){
+            return ["Smith Johnson", 20, "Pakistan"];
+        }
+        let [names, ages = 20, countrys] = user1();
+        console.log(names,'\n',ages,"\n",countrys);
+    </script>
+</body>
+</html>
