@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+function prom(){
+    return new Promise(function(resolve, reject){
+        console.log("Fetching data, please wait.");
+        setTimeout(() => {
+            $.get("https://jsonplaceholder.typicode.com/", function(data){
+                console.log(data);
+            }).fail(err => {
+                reject("")
+            })
+        }, 2000)
+    });
+}
+
+prom().then((result) => {
+    console.log(result);
+}).catch((error) => {
+    console.log(error);
+});
+
+</script>
+</body>
+</html>
